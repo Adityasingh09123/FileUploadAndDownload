@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload and Download</title>
+</head>
+<style>
+   .container{
+    border: 2px solid black;
+    margin: auto;
+    width: 30%;
+    height: 224px;
+    text-align: center;
+    margin-top: 240px;
+    border-radius: 10px;
+    background-color: lightgrey;
+   }
+   .download button:hover{
+    color:white;
+    background-color: black;
+   }
+</style>
+<body>
+    <div class="container">
+        <div class="upload">
+            <h2 style="color:blue">Upload Video File</h2>
+            <form method="POST" action="/" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <input type="submit" value="Upload"/>
+            </form>
+        </div>
+        <div class="download">
+            <h2 style="color:red">Download Video File</h2> <br>
+            <form action="/download" method="get">
+                <button type="submit">Download</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
